@@ -1,13 +1,13 @@
 package mindustry.logic;
 
 public enum ConditionOp{
-    equal("==", (a, b) -> Math.abs(a - b) < 0.000001, (a, b) -> a == b),
-    notEqual("not", (a, b) -> Math.abs(a - b) >= 0.000001, (a, b) -> a != b),
-    lessThan("<", (a, b) -> a < b),
-    lessThanEq("<=", (a, b) -> a <= b),
-    greaterThan(">", (a, b) -> a > b),
-    greaterThanEq(">=", (a, b) -> a >= b),
-    always("always", (a, b) -> true);
+    等于("==", (a, b) -> Math.abs(a - b) < 0.000001, (a, b) -> a == b),
+    不相等("not", (a, b) -> Math.abs(a - b) >= 0.000001, (a, b) -> a != b),
+    少于("<", (a, b) -> a < b),
+    少于等于("<=", (a, b) -> a <= b),
+    大于(">", (a, b) -> a > b),
+    大于等于(">=", (a, b) -> a >= b),
+    总是("always", (a, b) -> true);
 
     public static final ConditionOp[] all = values();
 
