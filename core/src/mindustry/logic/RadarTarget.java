@@ -4,14 +4,14 @@ import mindustry.game.*;
 import mindustry.gen.*;
 
 public enum RadarTarget{
-    any((team, other) -> true),
-    enemy((team, other) -> team != other.team),
-    ally((team, other) -> team == other.team),
-    player((team, other) -> other.isPlayer()),
-    attacker((pos, other) -> other.canShoot()),
-    flying((team, other) -> other.isFlying()),
-    boss((team, other) -> other.isBoss()),
-    ground((team, other) -> other.isGrounded());
+    任何((team, other) -> true),
+    敌人((team, other) -> team != other.team),
+    队友((team, other) -> team == other.team),
+    玩家((team, other) -> other.isPlayer()),
+    攻击((pos, other) -> other.canShoot()),
+    飞行((team, other) -> other.isFlying()),
+    BOSS((team, other) -> other.isBoss()),
+    地面((team, other) -> other.isGrounded());
 
     public final RadarTargetFunc func;
 
