@@ -4,11 +4,11 @@ import arc.math.geom.*;
 import mindustry.gen.*;
 
 public enum RadarSort{
-    distance((pos, other) -> -pos.dst2(other)),
-    health((pos, other) -> other.health()),
-    shield((pos, other) -> other.shield()),
-    armor((pos, other) -> other.armor()),
-    maxHealth((pos, other) -> other.maxHealth());
+    距离((pos, other) -> -pos.dst2(other)),
+    血量((pos, other) -> other.health()),
+    护盾((pos, other) -> other.shield()),
+    护甲((pos, other) -> other.armor()),
+    最大生命((pos, other) -> other.maxHealth());
 
     public final RadarSortFunc func;
 
